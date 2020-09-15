@@ -17,7 +17,7 @@ const Lateral = ()=>{
                         <Link  className='link' to='/blog'>
                                 <BookIcon /> Blog
                         </Link>
-                        <Link className='link' to='/search'>
+                        <Link className='link' to='/cuenta'>
                                 <AccountCircleIcon /> Mi cuenta
                         </Link>
                 </div>

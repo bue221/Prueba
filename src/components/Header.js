@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom'
 import { IconButton, TextField} from '@material-ui/core/';
 import SearchIcon from '@material-ui/icons/Search';
 import './styles/header.css'

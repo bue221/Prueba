@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Lateral from './components/Lateral';
 import Post from './components/Post';
 import Publi from './components/Publi';
+import Cuenta from './components/Cuenta';
 import {
         BrowserRouter as Router,
         Switch,
@@ -49,9 +50,10 @@ const App = ()=>{
                                                         <Post data={blog}/>
                                                 </div>
                                         </Route>
-                                        <Route path="/search">
+                                        <Route path="/cuenta">
                                                 <div className="main">
                                                         <Lateral />
+                                                        <Cuenta />
                                                 </div>
                                         </Route>
                                         <Route path="/">
