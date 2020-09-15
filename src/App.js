@@ -4,6 +4,7 @@ import axios from 'axios';
 import Header from './components/Header';
 import Lateral from './components/Lateral';
 import Post from './components/Post';
+import Publi from './components/Publi';
 import {
         BrowserRouter as Router,
         Switch,
@@ -16,6 +17,7 @@ import './App.css';
 
 const App = ()=>{
 
+        const [value, setValue ] = useState('');
         const [blog, setBlog] = useState('');
 
         useEffect(()=>{
@@ -23,7 +25,7 @@ const App = ()=>{
         },[]);
 
         const getData = ()=>{
-                let url = "https://jsonplaceholder.typicode.com/posts";
+                let url = `https://jsonplaceholder.typicode.com/posts/${value}`;
                 axios.get(url).then(res => res.data).then((data)=>{
                         setBlog(data);
                 }).catch((error) => {
@@ -31,11 +33,15 @@ const App = ()=>{
                 });
         }
 
+        //console.log(blog);
+        const cambio = (e)=>{
+                setValue(e.target.value);
+        }
 
         return(
                 <Fragment>
                         <Router>
-                                <Header />
+                                <Header boton={getData} cambio={cambio} value={value}/>
                                 <Switch>
                                         <Route path="/blog">
                                                 <div className="main">
@@ -51,6 +57,7 @@ const App = ()=>{
                                         <Route path="/">
                                                 <div className="main">
                                                         <Lateral />
+                                                        <Publi />
                                                 </div>
                                         </Route>
                                 </Switch>

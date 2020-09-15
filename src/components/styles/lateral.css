@@ -2,4 +2,22 @@
         flex: 0.2 1;
         display: grid;
         height: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-content: center;
+        align-items: center;
+        padding: 2rem;
+}
+
+
+.link{
+        color: black;
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+}
+
+.link:hover{
+        color: #05B2FF;
 }

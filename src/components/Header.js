@@ -4,7 +4,7 @@ import { IconButton, TextField} from '@material-ui/core/';
 import SearchIcon from '@material-ui/icons/Search';
 import './styles/header.css'
 
-const Header = ()=>{
+const Header = ({cambio, boton, value })=>{
         return(
                 <div className='header'>
                         <div className='header-info'>
@@ -12,8 +12,8 @@ const Header = ()=>{
                                 <h1>Unusual minds</h1>
                         </div>
                         <div>
-                                <TextField id="standard-basic" label="Buscar" />
-                                <IconButton>
+                                <TextField id="standard-basic" label="Buscar id"  onChange={cambio} value={value} />
+                                <IconButton onClick={boton}>
                                         <SearchIcon></SearchIcon>
                                 </IconButton>
                         </div>
