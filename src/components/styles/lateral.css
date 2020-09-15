@@ -1,0 +1,5 @@
+.lateral{
+        flex: 0.2 1;
+        display: grid;
+        height: 300px;
+}
