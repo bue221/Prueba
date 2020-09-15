@@ -1,0 +1,21 @@
+.header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 1px solid #F3F3F3;
+}
+
+.header-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+}
+
+.header-info > img{
+        width: 2.1rem;
+}
+
+.header-info > h1{
+        color: #05B2FF;
+}
